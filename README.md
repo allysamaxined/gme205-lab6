@@ -15,7 +15,7 @@ The core idea is that object organize state and behavior in memory. A relational
 ### Project Structure
 The structure of the project is as follows:
 ```
-gme205-lab5/
+gme205-lab6/
     diagrams/
         lab6_relational_model.png
     sql/
@@ -49,6 +49,7 @@ This shows the results after executing the queries in pgAdmin 4.
 | Building -> Parcel relationship | Y | The database must retain this, as this represents how the Building is connected to the Parcel, or which parcel a building belongs to. Similar to how Relational Databases work. |
 | Road.id, road_class, geometry | Y | Roads need unique identifiers. The road_class represents the category of the road, and the geometry enables the road to be represented spatially. |
 | SpatialRule.evaluation(parcel) | N | Like Parcel.area(), this one's a method that is executed. It evaluates whether a parcel satisfies a certain condition. It can be omitted since it represents an executable behavior than an object state. |
+| Parcel.is_active | Y | This must persist, since it determines if a parcel is valid or eligible. This is not available or saved on any other object-model elements and cannot be calculated with geometry alone. |
 
 #### Part F.2 README Reflections
 

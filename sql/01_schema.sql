@@ -1,7 +1,10 @@
+CREATE SCHEMA IF NOT EXISTS lab6;
+SET search_path TO lab6, public;
+
 CREATE TABLE lab6.parcels (
-    parcel_id TEXT PRIMARY KEY,
-    land_use TEXT NOT NULL,
-    geom geometry(Polygon, 32651) NOT NULL
+	parcel_id TEXT PRIMARY KEY,
+	land_use TEXT NOT NULL,
+	geom geometry(Polygon, 32651) NOT NULL
 );
 
 CREATE TABLE lab6.buildings (
