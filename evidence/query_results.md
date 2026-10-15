@@ -1,0 +1,3 @@
+#### Explain in one sentence how this JOIN reconstructs the Building -> Parcel relationship from persistent keys.
+
+Answer: The JOIN operation included in the query reconstructs the relationship of Building -> Parcel by matching the foreign key (FK) of parcel_id in the buildings table, with the corresponding primary key (PK) in the parcels_table, allowing the database to identify which parcel each building belongs to.
