@@ -2,7 +2,7 @@
 SELECT parcel_id, land_use, ST_Area(geom) AS area_sqm 
 FROM lab6.parcels;
 
--- -- Query 2
+-- Query 2
 SELECT b.building_id, 
        b.floors, 
        p.parcel_id, 
@@ -11,7 +11,7 @@ FROM lab6.buildings AS b
 JOIN lab6.parcels AS p 
   ON p.parcel_id = b.parcel_id; 
 
--- -- Query 3
+-- Query 3
 SELECT b.building_id, 
 	p.parcel_id, 
 	ST_Within(b.geom, p.geom) AS is_inside 
@@ -19,7 +19,7 @@ FROM lab6.buildings AS b
 JOIN lab6.parcels AS p 
 	ON p.parcel_id = b.parcel_id;
 
--- -- Query 4
+-- Query 4
 SELECT p.parcel_id, 
 	r.road_id, 
 	ST_DWithin(p.geom, r.geom, 15) AS within_15m 
